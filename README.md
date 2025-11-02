@@ -1,4 +1,4 @@
-# 📝 FastAPI Todo Application
+# 📝 Todo Application
 
 A modern, full-stack todo application built with FastAPI, SQLAlchemy, and Bootstrap. Features JWT authentication, responsive design, and clean architecture.
 
