@@ -14,7 +14,6 @@ async-timeout==5.0.1
 attrs==25.3.0
 autobahn==24.4.2
 Automat==25.4.16
-bcc==0.18.0
 bcrypt==4.0.1
 blinker==1.4
 Brlapi==0.8.3
