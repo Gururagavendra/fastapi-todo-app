@@ -1,18 +1,18 @@
 # 📝 FastAPI Todo Application
 
-A modern, full-stack todo application built with FastAPI, SQLAlchemy, and Bootstrap. This project demonstrates professional web development practices including authentication, database management, responsive design, and clean architecture.
+A modern, full-stack todo application built with FastAPI, SQLAlchemy, and Bootstrap. Features JWT authentication, responsive design, and clean architecture.
 
 ## 🌟 Features
 
 ### Core Functionality
 - ✅ **Complete Todo Management** - Create, read, update, and delete todos
-- 🔐 **User Authentication & Authorization** - Secure JWT-based authentication
+- 🔐 **User Authentication & Authorization** - Secure JWT-based authentication, password hashing
 - 👤 **User Registration & Login** - Complete user management system
 - 🎯 **Priority System** - Set todo priorities from 1-5
 - ✔️ **Task Completion** - Mark todos as complete/incomplete
 - 📱 **Responsive Design** - Mobile-friendly Bootstrap UI
 
-### 🛠️ Technology Stack & Features
+### 🛠️ Technology Stack
 - 🚀 **FastAPI** - web framework 
 - 🗄️ **SQLAlchemy** - SQL toolkit and ORM
 - � **SQLite** - database engine
@@ -20,7 +20,6 @@ A modern, full-stack todo application built with FastAPI, SQLAlchemy, and Bootst
 - 🔒 **python-jose** - JWT token handling for secure authentication
 - � **bcrypt** - Advanced password hashing for secure user authentication
 - ⚡ **uvicorn** - Lightning-fast ASGI server for production deployment
-
 
 ## 📋 API Endpoints
 
@@ -42,14 +41,6 @@ A modern, full-stack todo application built with FastAPI, SQLAlchemy, and Bootst
 - `GET /user/` - Get user information
 - `POST /user/` - Create new user
 - `PUT /user/password` - Change user password
-
-## 🔒 Security Features
-
-- **Password Hashing** - bcrypt algorithm for secure password storage
-- **JWT Tokens** - Secure authentication with expiration
-- **Input Validation** - Pydantic schemas prevent invalid data
-- **SQL Injection Protection** - SQLAlchemy ORM parameterized queries
-- **Authentication Middleware** - Protected routes require valid tokens
 
 ## Demo
 
