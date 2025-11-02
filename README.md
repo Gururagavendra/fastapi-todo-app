@@ -12,32 +12,50 @@ A modern, full-stack todo application built with FastAPI, SQLAlchemy, and Bootst
 - ✔️ **Task Completion** - Mark todos as complete/incomplete
 - 📱 **Responsive Design** - Mobile-friendly Bootstrap UI
 
-### Technical Features
-- 🚀 **FastAPI Backend** - Modern, fast Python web framework
-- 🗄️ **SQLAlchemy ORM** - Robust database management
-- 🔒 **JWT Authentication** - Secure token-based authentication
-- 📊 **SQLite Database** - Lightweight, file-based database
-- 🎨 **Bootstrap Frontend** - Professional, responsive UI
-- 🔧 **Pydantic Validation** - Type-safe data validation
-- 📝 **Jinja2 Templates** - Server-side template rendering
+### 🛠️ Technology Stack & Features
+- 🚀 **FastAPI** - web framework 
+- 🗄️ **SQLAlchemy** - SQL toolkit and ORM
+- � **SQLite** - database engine
+- � **Pydantic** - Data validation using Python type hints for type-safe operations
+- 🔒 **python-jose** - JWT token handling for secure authentication
+- � **bcrypt** - Advanced password hashing for secure user authentication
+- ⚡ **uvicorn** - Lightning-fast ASGI server for production deployment
 
-## 🛠️ Technology Stack
 
-### Backend
-- **FastAPI** - High-performance web framework
-- **SQLAlchemy** - SQL toolkit and ORM
-- **SQLite** - Database engine
-- **Pydantic** - Data validation using Python type hints
-- **bcrypt** - Password hashing
-- **python-jose** - JWT token handling
-- **uvicorn** - ASGI server
+## 📋 API Endpoints
 
-### Frontend
-- **HTML5** - Semantic markup
-- **CSS3** - Modern styling with flexbox
-- **Bootstrap 4** - Responsive framework
-- **JavaScript** - Client-side interactivity
-- **Jinja2** - Template engine
+### Authentication
+- `GET /auth/login-page` - Login page
+- `GET /auth/register-page` - Registration page
+- `POST /auth/token` - Generate JWT token
+- `POST /auth/register` - Create new user account
+
+### Todos
+- `GET /todos/todo-page` - Todo list page
+- `GET /todos/add-todo-page` - Add todo page
+- `GET /todos/edit-todo-page/{todo_id}` - Edit todo page
+- `POST /todos/add-todo` - Create new todo
+- `PUT /todos/edit-todo/{todo_id}` - Update existing todo
+- `DELETE /todos/delete-todo/{todo_id}` - Delete todo
+
+### Users
+- `GET /user/` - Get user information
+- `POST /user/` - Create new user
+- `PUT /user/password` - Change user password
+
+## 🔒 Security Features
+
+- **Password Hashing** - bcrypt algorithm for secure password storage
+- **JWT Tokens** - Secure authentication with expiration
+- **Input Validation** - Pydantic schemas prevent invalid data
+- **SQL Injection Protection** - SQLAlchemy ORM parameterized queries
+- **Authentication Middleware** - Protected routes require valid tokens
+
+## Demo
+
+<p align="center">
+  <img src="demo.gif" alt="animated" />
+</p>
 
 ## 📁 Project Structure
 
@@ -110,39 +128,5 @@ todo_app/
    - You'll be redirected to the login page
    - Register a new account or use existing credentials
 
-## 📋 API Endpoints
 
-### Authentication
-- `GET /auth/login-page` - Login page
-- `GET /auth/register-page` - Registration page
-- `POST /auth/token` - Generate JWT token
-- `POST /auth/register` - Create new user account
 
-### Todos
-- `GET /todos/todo-page` - Todo list page
-- `GET /todos/add-todo-page` - Add todo page
-- `GET /todos/edit-todo-page/{todo_id}` - Edit todo page
-- `POST /todos/add-todo` - Create new todo
-- `PUT /todos/edit-todo/{todo_id}` - Update existing todo
-- `DELETE /todos/delete-todo/{todo_id}` - Delete todo
-
-### Users
-- `GET /user/` - Get user information
-- `POST /user/` - Create new user
-- `PUT /user/password` - Change user password
-
-## 🔒 Security Features
-
-- **Password Hashing** - bcrypt algorithm for secure password storage
-- **JWT Tokens** - Secure authentication with expiration
-- **Input Validation** - Pydantic schemas prevent invalid data
-- **SQL Injection Protection** - SQLAlchemy ORM parameterized queries
-- **Authentication Middleware** - Protected routes require valid tokens
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome!
