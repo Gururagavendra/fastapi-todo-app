@@ -1,0 +1,148 @@
+# 📝 FastAPI Todo Application
+
+A modern, full-stack todo application built with FastAPI, SQLAlchemy, and Bootstrap. This project demonstrates professional web development practices including authentication, database management, responsive design, and clean architecture.
+
+## 🌟 Features
+
+### Core Functionality
+- ✅ **Complete Todo Management** - Create, read, update, and delete todos
+- 🔐 **User Authentication & Authorization** - Secure JWT-based authentication
+- 👤 **User Registration & Login** - Complete user management system
+- 🎯 **Priority System** - Set todo priorities from 1-5
+- ✔️ **Task Completion** - Mark todos as complete/incomplete
+- 📱 **Responsive Design** - Mobile-friendly Bootstrap UI
+
+### Technical Features
+- 🚀 **FastAPI Backend** - Modern, fast Python web framework
+- 🗄️ **SQLAlchemy ORM** - Robust database management
+- 🔒 **JWT Authentication** - Secure token-based authentication
+- 📊 **SQLite Database** - Lightweight, file-based database
+- 🎨 **Bootstrap Frontend** - Professional, responsive UI
+- 🔧 **Pydantic Validation** - Type-safe data validation
+- 📝 **Jinja2 Templates** - Server-side template rendering
+
+## 🛠️ Technology Stack
+
+### Backend
+- **FastAPI** - High-performance web framework
+- **SQLAlchemy** - SQL toolkit and ORM
+- **SQLite** - Database engine
+- **Pydantic** - Data validation using Python type hints
+- **bcrypt** - Password hashing
+- **python-jose** - JWT token handling
+- **uvicorn** - ASGI server
+
+### Frontend
+- **HTML5** - Semantic markup
+- **CSS3** - Modern styling with flexbox
+- **Bootstrap 4** - Responsive framework
+- **JavaScript** - Client-side interactivity
+- **Jinja2** - Template engine
+
+## 📁 Project Structure
+
+```
+todo_app/
+├── main.py                 # Application entry point
+├── database.py             # Database configuration
+├── models.py               # SQLAlchemy models
+├── schemas.py              # Pydantic schemas
+├── settings.py             # Application settings
+├── utils.py                # Utility functions
+├── routers/                # API route modules
+│   ├── __init__.py
+│   ├── auth.py             # Authentication routes
+│   ├── todos.py            # Todo CRUD operations
+│   ├── user.py             # User management
+│   └── admin.py            # Admin functionality
+├── templates/              # Jinja2 HTML templates
+│   ├── layout.html         # Base template
+│   ├── navbar.html         # Navigation component
+│   ├── login.html          # Login page
+│   ├── register.html       # Registration page
+│   ├── todo.html           # Todo list view
+│   ├── add-todo.html       # Add todo form
+│   └── edit-todo.html      # Edit todo form
+├── static/                 # Static assets
+│   ├── css/
+│   │   ├── base.css        # Custom styles
+│   │   └── bootstrap.css   # Bootstrap framework
+│   └── js/
+│       ├── base.js         # Custom JavaScript
+│       ├── bootstrap.js    # Bootstrap components
+│       ├── jquery-slim.js  # jQuery library
+│       └── popper.js       # Popper.js for tooltips
+└── myenv/                  # Virtual environment
+```
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Python 3.8+
+- pip (Python package manager)
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd todo_app
+   ```
+
+2. **Create and activate virtual environment**
+   ```bash
+   python -m venv myenv
+   source myenv/bin/activate  # On Windows: myenv\Scripts\activate
+   ```
+
+3. **Install dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Run the application**
+   ```bash
+   uvicorn main:app --reload
+   ```
+
+5. **Access the application**
+   - Open your browser and navigate to `http://localhost:8000`
+   - You'll be redirected to the login page
+   - Register a new account or use existing credentials
+
+## 📋 API Endpoints
+
+### Authentication
+- `GET /auth/login-page` - Login page
+- `GET /auth/register-page` - Registration page
+- `POST /auth/token` - Generate JWT token
+- `POST /auth/register` - Create new user account
+
+### Todos
+- `GET /todos/todo-page` - Todo list page
+- `GET /todos/add-todo-page` - Add todo page
+- `GET /todos/edit-todo-page/{todo_id}` - Edit todo page
+- `POST /todos/add-todo` - Create new todo
+- `PUT /todos/edit-todo/{todo_id}` - Update existing todo
+- `DELETE /todos/delete-todo/{todo_id}` - Delete todo
+
+### Users
+- `GET /user/` - Get user information
+- `POST /user/` - Create new user
+- `PUT /user/password` - Change user password
+
+## 🔒 Security Features
+
+- **Password Hashing** - bcrypt algorithm for secure password storage
+- **JWT Tokens** - Secure authentication with expiration
+- **Input Validation** - Pydantic schemas prevent invalid data
+- **SQL Injection Protection** - SQLAlchemy ORM parameterized queries
+- **Authentication Middleware** - Protected routes require valid tokens
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
